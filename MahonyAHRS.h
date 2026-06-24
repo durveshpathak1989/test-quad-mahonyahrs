@@ -12,8 +12,8 @@
 
 #include <Arduino.h>
 #include <math.h>
-#include "MPU9250.h"
-#include "AHRSCommon.h"
+#include "../IMU/MPU9250.h"
+#include "../AHRS/AHRSCommon.h"
 
 
 class MahonyAHRS {
@@ -27,6 +27,7 @@ public:
     // Uses 9-DOF when s.magOk == true.
     // Falls back to 6-DOF when s.magOk == false.
     bool update(const MPU_SensorData& s, float dt, AttitudeEstimate& att);
+    bool update(const AHRSInput& in, float dt, AttitudeEstimate& att);
 
     // Read current internal quaternion.
     // const means this function will not modify the Mahony object.

@@ -208,6 +208,21 @@ bool MahonyAHRS::update(const MPU_SensorData& s, float dt, AttitudeEstimate& att
     return true;
 }
 
+bool MahonyAHRS::update(const AHRSInput& in, float dt, AttitudeEstimate& att) {
+    MPU_SensorData s;
+    s.ax_g = in.ax_g;
+    s.ay_g = in.ay_g;
+    s.az_g = in.az_g;
+    s.gx_dps = in.gx_dps;
+    s.gy_dps = in.gy_dps;
+    s.gz_dps = in.gz_dps;
+    s.mx_uT = in.mx_uT;
+    s.my_uT = in.my_uT;
+    s.mz_uT = in.mz_uT;
+    s.magOk = in.magValid;
+    return update(s, dt, att);
+}
+
 void MahonyAHRS::getQuaternion(float& q0, float& q1, float& q2, float& q3) const {
     q0 = _q0;
     q1 = _q1;
