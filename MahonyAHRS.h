@@ -1,3 +1,10 @@
+/*
+ * Name: MahonyAHRS.h
+ * Use: Declaration for the Mahony AHRS attitude filter.
+ * Version: 4.0.0
+ * Created by: Durvesh Pathak dp676@cornell.edu
+ */
+
 /**
  * ============================================================
  *  MahonyAHRS.h  —  Mahony Attitude Estimator  (v4.0)

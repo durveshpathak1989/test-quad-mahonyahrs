@@ -1,3 +1,10 @@
+/*
+ * Name: MahonyAHRS.cpp
+ * Use: Implementation of the Mahony AHRS attitude filter.
+ * Version: 4.0.0
+ * Created by: Durvesh Pathak dp676@cornell.edu
+ */
+
 /**
  * ============================================================
  *  MahonyAHRS.cpp  —  Application  (v4.0)
