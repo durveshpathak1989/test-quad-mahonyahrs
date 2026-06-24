@@ -1,5 +1,9 @@
 # Test Quad MahonyAHRS Library
 
+## Explain It Simply
+
+This module is another balance filter. It is kept as a separate reference version so you can compare it with the AHRS module used by the main flight sketch.
+
 This standalone repository provides the `MahonyAHRS` estimator. In the main firmware the same implementation is also available through the consolidated AHRS library.
 
 ## Pin Map
